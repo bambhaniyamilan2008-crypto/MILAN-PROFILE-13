@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="static/generated-icon.png" type="image/png">
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/animations.css">
+    <link rel="stylesheet" href="static/css/3d-effects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload styles to eliminate initial flash/blur -->
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .dark-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: -1;
+        }
+        
+        .wrapper {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .section, .hero-content, .profile-container, .profile-image, 
+        .hero-text, .about-content, .skills-grid, .education-item, 
+        .project-card, .contact-info {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+    
+    <!-- Moved script to head with defer attribute -->
+    <script src="./static/js/particles.js" defer></script>
+</head>
+<body>
+    <!-- Particle Background Canvas for better -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Dark overlay for better text contrast -->
+    <div class="dark-overlay" style="background: rgba(0, 0, 0, 0.95);"></div>
+
+    <div class="wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src='static/media/milu.jpg' alt="Professional headshot">
+                </div>
+                <h1 class="gradient-text">MILAN BAMBAHNIYA</h1>
+                <p class="subtitle">Full Stack Developer</p>
+            </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Hi, I'm Milan Bambhaniya, an IT professional with expertise in Python. I'm passionate about reading, gaming, writing, and always eager to learn new things..</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>C/C++</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>Django Backend</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Database</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>Database Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>AI & Tools</h3>
+                    <ul>
+                        <li>Prompt Engineering</li>
+                        <li>AI Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-card">
+                    <div class="education-year">2026</div>
+                    <h3>B.E Running</h3>
+                </div>
+                <div class="education-card">
+                    <div class="education-year">2025</div>
+                    <h3>HSC Completed</h3>
+                </div>
+                <div class="education-card">
+                    <div class="education-year">2023</div>
+                    <h3>SSC Completed</h3>
+                </div>
+                <div class="education-card">
+                    <div class="education-year">2022</div>
+                    <h3>Primary Schooling Completed</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" style="position: relative; overflow: hidden; max-width: 320px; margin: 0 auto; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border-radius: 12px;">
+                    <a href="https://oreecart-bmmv.onrender.com" target="_blank" style="display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 10;"></a>
+                    <div class="project-content" style="position: relative; z-index: 5; padding: 15px;">
+                        <img src="static/ecom.webp" alt="OREECART Project" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px; margin-bottom: 15px; max-height: 160px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">OREECART E COMMERCE</h3>
+                    </div>
+                </div>
+                <div class="project-card" style="position: relative; overflow: hidden; max-width: 320px; margin: 0 auto; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border-radius: 12px;">
+                    <a href="https://oree-text-to-speech.onrender.com/" target="_blank" style="display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 10;"></a>
+                    <div class="project-content" style="position: relative; z-index: 5; padding: 15px;">
+                        <img src="static/ecom.webp" alt="OREE Text-to-Speech Project" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px; margin-bottom: 15px; max-height: 160px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">OREE TEXT-TO-SPEECH</h3>
+                    </div>
+                </div>
+            </div>
+            <ul class="projects-list">
+                <li>
+                    <a href="https://oreecart-bmmv.onrender.com" target="_blank" class="project-link">
+                        <img src="static/ecom.webp" alt="OREECART Project" class="project-thumb">
+                        <span class="project-title">OREECART E COMMERCE</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://oree-text-to-speech.onrender.com/" target="_blank" class="project-link">
+                        <img src="static/ecom.webp" alt="OREE Text-to-Speech Project" class="project-thumb">
+                        <span class="project-title">OREE TEXT-TO-SPEECH</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <style>
+            /* Improved mobile view styles */
+            @media (max-width: 768px) {
+                .wrapper {
+                    padding: 10px;
+                }
+                .section-title {
+                    font-size: 1.8rem;
+                    margin-bottom: 1.5rem;
+                }
+                .hero-content h1 {
+                    font-size: 2rem;
+                }
+                .hero-content .subtitle {
+                    font-size: 1.1rem;
+                }
+                .floating-shapes {
+                    display: none;
+                }
+                .about-content p, .skill-card li, .education-card p {
+                    font-size: 0.95rem;
+                }
+                .hero-image {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    position: relative;
+                    z-index: 5;
+                }
+                .hero-image::before {
+                    content: "";
+                    position: absolute;
+                    width: 140px;
+                    height: 140px;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    z-index: -1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .hero-image img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 2px solid rgba(16, 2, 2, 0.3);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                    transition: transform 0.3s ease;
+                    position: relative;
+                    z-index: 10;
+                }
+                .hero-image img:hover {
+                    transform: scale(1.05);
+                }
+                .skill-card, .education-card {
+                    padding: 15px;
+                }
+                .projects-grid {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .contact-button {
+                    padding: 8px 15px;
+                    font-size: 0.9rem;
+                }
+                .hero-content {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 2rem 1rem;
+                }
+                
+                .profile-container {
+                    width: 150px;
+                    height: 150px;
+                    margin: 0 auto 2rem;
+                    position: relative;
+                }
+                
+                .profile-image {
+                    width: 150px; /* Adjusted width */
+                    height: 150px; /* Adjusted height */
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid rgba(9, 1, 1, 0.24);
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+                    position: relative;
+                    z-index: 5; /* Increased z-index */
+                    background-color: rgba(0, 0, 0, 0.8); /* Added background color */
+                }
+                
+                .profile-shape {
+                    display: circle; /* Hide the shape in mobile view to fix the blue circle issue */
+                }
+                
+                .hero-text {
+                    width: 100%;
+                    padding: 0;
+                }
+                
+                .hero-text h1 {
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+                
+                .hero-text p {
+                    font-size: 1.1rem;
+                    margin-bottom: 1.5rem;
+                }
+                
+                .cta-button {
+                    padding: 0.8rem 2rem;
+                    font-size: 1rem;
+                }
+            }
+
+            /* Mobile specific fixes */
+            @media (max-width: 768px) {
+                #particle-canvas {
+                    display: block !important;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    z-index: 1;
+                }
+                
+                .dark-overlay {
+                    background: rgb(0, 0, 0); /* Fully black on mobile */
+                    z-index: 0;
+                }
+                
+                .wrapper {
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+
+            /* Projects section mobile styles */
+            @media (max-width: 768px) {
+                .projects-grid, .project-card {
+                    display: none;
+                }
+                .projects-list {
+                    display: block;
+                    padding: 0;
+                    margin: 0 auto;
+                    max-width: 350px;
+                }
+                .projects-list li {
+                    list-style: none;
+                    margin-bottom: 18px;
+                    background: #181818;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+                    overflow: hidden;
+                    transition: box-shadow 0.2s;
+                }
+                .projects-list li:active, .projects-list li:focus-within {
+                    box-shadow: 0 0 0 2px #00ffd0;
+                }
+                .project-link {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 10px 12px;
+                    gap: 14px;
+                }
+                .project-thumb {
+                    width: 54px;
+                    height: 54px;
+                    object-fit: cover;
+                    border-radius: 7px;
+                    background: #222;
+                    flex-shrink: 0;
+                }
+                .project-title {
+                    font-size: 1.08rem;
+                    font-weight: 600;
+                    letter-spacing: 0.01em;
+                }
+            }
+
+            @media (min-width: 769px) {
+                .projects-list {
+                    display: none;
+                }
+                .projects-grid, .project-card {
+                    display: flex;
+                }
+            }
+        </style>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <a href="mailto:bambhaniyamilan.2008@gmail.com" class="contact-button">Email Me</a>
+                <a href="https://Bamabhniyamilan.com" class="contact-button">LinkedIn</a>
+                <a href="https://github.com/Milanbambhaniya" class="contact-button">GitHub</a>
+        </section>
+    </div>
+
+    <!-- Script moved to head -->
+</body>
+</html>
