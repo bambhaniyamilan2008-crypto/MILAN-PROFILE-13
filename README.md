@@ -25,15 +25,6 @@
 <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,express,python,java,cpp,mysql,mongodb,git,github,figma" />
 </p>
 
----
-
-### 📊 GitHub Stats  
-<p>
-<img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight" height="180px"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=tokyonight" height="180px"/>
-</p>
-
----
 
 ### 🏆 Profile Views  
 ![Profile views](https://komarev.com/ghpvc/?username=yourusername&color=blue)
