@@ -7,7 +7,7 @@
 - 🔭 I’m currently working on **Web Development Projects**  
 - 🌱 I’m learning **React, Node.js, Python**  
 - 💬 Ask me about **Frontend, Backend, APIs, Databases**  
-- 📫 How to reach me: **yourmail@gmail.com**
+- 📫 How to reach me: **bambhaniyamilan.2008@gmail.com**
 
 ---
 
